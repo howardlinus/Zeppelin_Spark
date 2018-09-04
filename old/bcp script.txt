@@ -1,0 +1,168 @@
+start 1:05pm (4:05pm) 
+
+
+gzip starts sun: 5:30pm
+
+
+start 8:12am (11:12am) Sat 3/25
+
+bcp test_howard.dbo.sample_loans2 out E:\TEMP\freddieModel.csv -c -T -t,
+bcp GNMA_I_Residential_Historical.dbo.Transition out D:\temp\GNMAI_Transition -c -T -t"|"
+
+bcp Central_Rate_Repository_of_Record.dbo.Freddie_PMMS_Survey_Rates out C:\Users\hlin\Documents\macro\PMMS_Survey_Rates.csv -c -T -t"|"
+bcp MBSData.dbo.tblRemitData out H:\RemitData.csv -c -T -t"|"  -C 65001  (-C 65001 for utf-8)
+
+bcp Core_Model.dbo.non_agency_panel2 out H:\non_agency_panel2.csv -c -t"|" -S 104.196.124.78 -U ba_miacgoogle
+
+
+bcp "select * from [AuditModuleGrid_Assign Product Code 3] for json path" queryout D:\temp\productcode3.json  -c -d Test_Howard -T
+
+bcp "select * from [AuditModuleGrid_Assign Product Code 3] " queryout D:\temp\productcode3.json  -c -d Test_Howard -T
+
+
+
+bcp Core_Model.dbo.non_agency_altpanel1 out H:\RModel_projects\nonag_alt.csv -c -t"|" -S 35.196.161.251 -U ba_miacgoogle
+bcp master.dbo.tt1 out H:\RModel_projects\FLHLMCpanel01.csv -c -t"|" -S 35.196.161.251 -U ba_miacgoogle
+
+
+bcp "select * from non_agency_altpanel1" queryout H:\RModel_projects\nonag_alt.csv -d Core_Model -c -t, -S 35.196.161.251 -U ba_miacgoogle
+
+bcp "select * from tt1" queryout H:\RModel_projects\FLHLMCpanel01.csv -d master -c -t, -S 35.196.161.251 -U ba_miacgoogle
+
+
+
+bcp Central_Rate_Repository_of_Record.dbo.hpi_zip3 in C:\Users\hlin\Documents\HPIZIP3.csv  -c -t, -S 35.196.161.251 -U ba_miacgoogle
+
+
+runas /netonly /user:WINMIACBA01\MIACXTRA\ba_hlin "C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\Ssms.exe"
+
+
+C:\Program Files (x86)\Google\Cloud SDK> gsutil cp D:\temp\GNMAI_Transition.csv gs://mortgage-data-warehouse/GNMAI
+
+gsutil cp D:\Downloads\historical_data1_time_Q.txt gs://mortgage-data-warehouse/FHLMC/
+
+
+gsutil -m cp D:\MBSData\Historic_Remittance_Archives\????????\*.REM gs://mortgage-data-warehouse/MBSData_FTP/Historic_Remittance_Archives/
+
+gsutil -m cp H:\Stata\Stata.rar gs://mortgage-data-warehouse/MBSData_FTP/Historic_Remittance_Archives/
+
+gsutil -m cp -r "H:\Bulk Storage MIAC Files Older and Larger etc" gs://archives-miacba/GMandigo/
+
+
+
+gsutil cp gs://mortgage-data-warehouse/MBSData_aft2011/OrigData.csv - | tr -d '\000' | gsutil cp - gs://mortgage-data-warehouse/MBSData_aft2011/OrigData2.csv   
+
+
+gsutil cp D:\KBRA\unemploy\*.*  gs://mortgage-data-warehouse/temp
+ 
+gsutil -m cp gs://mortgage-data-warehouse/temp/dataflowk/* D:\temp\dataflowk\
+
+gsutil cp gs://mortgage-data-warehouse/temp/dataflowk/sstempF1.xdf D:\temp\dataflowk\
+
+
+gsutil cp D:\temp\dataflowk\ssA2.xdf gs://mortgage-data-warehouse/temp/dataflowk/ 
+
+
+
+fnma data
+-----------------------
+bcp 
+
+"select  
+      a.[Data_Dt]
+      ,a.[NoteDate]
+      ,a.[Orig_Bal]
+      ,a.[Orig_Bal_MIAC]
+      ,a.[Appraisal_Value_Orig]
+      ,a.[Appraisal_Value_Date_Orig]
+      ,a.[Appraisal_Type]
+      ,a.[Purchase_price]
+      ,a.[Orig_LTV]
+      ,a.[Orig_LTV_MIAC]
+      ,a.[Orig_CLTV]
+      ,a.[Orig_CLTV_MIAC]
+      ,a.[Lien_Type]
+      ,a.[Balloon_Flag]
+      ,a.[Balloon_Dt]
+      ,a.[Orig_Rate]
+      ,a.[Coupon]
+      ,a.[Cohort]
+      ,a.[Generic_Cohort]
+      ,a.[SectorType]
+      ,a.[Vintage]
+      ,a.[MIAC_Sector]
+      ,a.[Jumbo_Flag]
+      ,a.[MIAC_SAPAR]
+      ,a.[MIAC_Cohort_Year]
+      ,a.[MIAC_Cohort_Monthly]
+      ,a.[Orig_Dt]
+      ,a.[First_Pmt_Dt]
+      ,a.[FirstPayDt_MIAC]
+      ,a.[Maturity_Dt]
+      ,a.[Maturity_Dt_MIAC]
+      ,a.[Orig_Term]
+      ,a.[Orig_Term_MIAC]
+      ,a.[Orig_Stated_Term]
+      ,a.[Orig_Stated_Term_MIAC]
+      ,a.[Original_Amort_Term]
+      ,a.[Orig_Non_Amort_Term]
+      ,a.[Orig_Non_Amort_Term_MIAC]
+      ,a.[Orig_DTI]
+      ,a.[Orig_DTI_MIAC]
+      ,a.[Orig_DTI_Front]
+      ,a.[Orig_FICO]
+      ,a.[Orig_FICO_MIAC]
+      ,a.[HELOC_Flag]
+      ,a.[HELOC_Type]
+      ,a.[HETierFlag]
+      ,a.[HEUtilization]
+      ,a.[IOEndDate]
+      ,a.[IOFlag]
+      ,a.[ARM_Flag]
+      ,a.[Amort_Type]
+      ,a.[Lender_Type]
+      ,a.[Doc_Type]
+      ,a.[Loan_Purpose]
+      ,a.[Owner_Occup]
+      ,a.[Num_Units]
+      ,a.[Num_Borrowers]
+      ,a.[First_Time_Buyer_Flag]
+      ,a.[Prod_Type]
+      ,a.[ProductCD]
+      ,a.[Program_Code]
+      ,a.[Prop_Type]
+      ,a.[OrigPandI]
+      ,a.[OrigPandI_MIAC]
+      ,a.[OrigPITI]
+      ,a.[OrigPITI_MIAC]
+      ,a.[PMICode]
+      ,a.[PMIPct]
+      ,a.[PMI_Pmt]
+      ,a.[PrepayPenaltyTerm]
+      ,a.[PrepayPenaltyFlag]
+      ,a.[PrePayPenaltyDescription]
+      ,a.[OrigSchedPrinc]
+      ,a.[OrigSchedPrinc_MIAC]
+      ,a.[SrLien_Bal]
+      ,a.[JrLien_Bal]
+      ,a.[Originator]
+      ,a.[Gfee]
+      ,a.[Sfee]
+      ,a.[ServicerName]
+      ,a.[SettleDate]
+      ,a.[Related_Loan_ID]
+      ,a.[QM_Flag_from_client]
+      ,a.[Agency_Flag_from client]
+      ,a.[Insurance_Type]
+      ,a.[ProgSectrCollatCode]
+      ,a.[PropAddress]
+      ,a.[City]
+      ,a.[State]
+      ,a.[PropZip]
+      ,a.[Orig_Year]
+,b.*
+FROM [FNMA_Historical].[dbo].[Origination] a
+left outer join [FNMA_Historical].[dbo].[Transition] b
+on a.LoanID = b.LoanID "
+
+queryout E:\TEMP\FNMAModel.csv -c -T -t,

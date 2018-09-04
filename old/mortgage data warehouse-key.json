@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "mortgage-data-warehouse",
+  "private_key_id": "df5d0c14339e19297e6ef16319fc59a9b306eb5c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDuBkIW3lMfp8b3\nkELSDFwFrKuWKLysTjkTSBqNlHCnYf8F3fNMP0/rmDa/HKhMganjLUKN98674Vg+\nzbzoYx1j23ZmDWSaheqpRDQCk3CY4Pbpreytz4pYuA9H9PXcmDne5wd4GIscJhBF\nMPYtHszxHJ/He3Z+gIYjVpSaCEyKpg3apPSUhElhIPFVWiVHWjgtV5CArW6vAtAR\nPVeLPZvw1VzSksw/TSV4wWnaYn2r6+m7Jolp5i4HgcgcoS1AWdY/tUdMsAG4EGG5\nBVLNb28gZTxno+ex1KOB3+pDhhzFN8Y7QMqPIF0KZxB2Ybn4EoQXLMAekZ8l2jMv\nHqDSkrWJAgMBAAECggEAK06QL8D7tsK7/McOoVEGXTHxdjyrN150HAH+cswTQyEd\nWV/sqG7Mh70GGPeJ14Gv+1l8xn/T6XMyrxqXyGBgNI71l9PP/h1neKykGePhlK85\nvYKbkXQ1Y7b5cMotAZngzaGTRlKQ3OpAA5bI86Sq/SOMHqtj/9g6j6ttFil0Y7VA\n6btAhTZhdcRfNu8QA+R07lIGX29jpnGtpSj3ADAXe7FuWT6gsgzQk4/SVQwpMHSB\nRmFxqMJOK6wmjTsieXKvt9rp8dnSWm0zrOaQxQUhdmDSWUAbCVvVVh1tEiFInx1/\n1ZJt1Rgn1pzJ1LYno6WcU8d36aUZW1N/SGreSNnNQQKBgQD+iYBX1i2954XQgcWW\n31upibYEjdV8l93tHklF8uvWxHni+okEp0FvM+sxuBjCN+2zI15jeEv2N4pMoEcc\ntvTrRGv0S8ppieIwDWCGbd9ufz/uyJ05mpm2jTEdYHtsonOASoXmhpQDQRs7E6y7\nxjgN5yUq3Nb7AYxGl7hTW2ssbQKBgQDvZHY7sTjyGFqHCQhtXa3QnoA2IDwZIAv6\n7whrDeeiDdnt5HgtFhTCMp9NladKVu4d+FXYQ3G0+pkOOGMAjQ/f2U70F77GCJNl\n7LDJCHE0goY+NGZXUsRxbCojM/kyJTYrQKIVxDuxJl+pYl0iDYAekCFwTj7T4WNA\naM7X0dbEDQKBgQD3YQ+ZTpFaNb+568XrYd0mIq8CMg7AbqDDqWGxV+yZ6I5FaRTt\nrthLiXwV8EQvzkd4iPFdXzcEbuo8mrFCWRYj6XW6EkcA1387EGU1gWdbbtTl75fO\nulCWORb45CJQbHowvzzv1O/ZUddzTSXdwUINUQ6wX72YaeK5YQ9GBF1e6QKBgQDR\nJqqN2HZyPYjKNcAhHRmBDRnjMCKRqQgOgsyOC6X2VbezOkssyP/18xhvRnLUZkK/\n+Hm36qTrg445eFY24wedgVSTujM4/cEZ6cNCwJd3UxpKOqm3XV634dKm0v/DKfO7\nskpqTfoA+g/WA1RvLfBjw3UTk6kcoOyAF5GvyWuj+QKBgCt8MkmXW6sNYni/Z811\nAevk6MpdLp6O4vnF+L061wInUWGzrpj4bJJClhy8mZDxabWkkEVdtUg2xFIAWd9d\nMW4s++kX7KOiv9BwedW53e4qI2RQJA1OafRpT5o4uCoBIFpCRhzTvtllLb8SMnZC\n7I8dfeqWFSBESDQWvSmCvjIM\n-----END PRIVATE KEY-----\n",
+  "client_email": "401149737343-compute@developer.gserviceaccount.com",
+  "client_id": "104081041299029426319",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/401149737343-compute%40developer.gserviceaccount.com"
+}
